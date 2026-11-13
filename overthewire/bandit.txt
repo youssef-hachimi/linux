@@ -1,0 +1,118 @@
+overthewire.org challanges 
+bandit to learn linux : 
+levels passwords and how to get the solution : 
+bandit.labs.overthewire.org
+level 0 :
+
+bandit0
+bandit0 
+file name readme
+6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR
+
+level 1 :
+use ./- to show the content of hideen file 
+PK8fYLZg2hnHSz83plBL1iEPKdD3QToB
+
+level 2 : 
+--spaces in this filename--
+bandit2@bandit:~$ cat ./--spaces\ in\ this\ filename--
+7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
+
+level 3 :
+
+ls -ail
+total 12
+
+534446 -rw-r----- 1 bandit4 bandit3   33 Oct 25 13:37 ...Hiding-From-You
+bandit3@bandit:~/inhere$ cat ./...Hiding-From-You
+
+xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
+
+level 4 : 
+
+-file07
+6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
+
+
+level 5 : 
+
+$ find ./ -type f -size 1033c ! -executable
+./maybehere07/.file2
+ cat ./maybehere07/.file2
+
+pXa26xhMWaC2SvDotA4r9EgZkulOeSBW
+
+level 6 : 
+
+
+
+bandit6@bandit:/home$ find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+Explanation:
+- / → Search the entire server.
+- -type f → Regular files only.
+- -user bandit7 → Owned by user bandit7.
+- -group bandit6 → Owned by group bandit6.
+- -size 33c → Exactly 33 bytes.
+- 2>/dev/null → Hide permission-denied errors.
+
+
+/var/lib/dpkg/info/bandit7.password
+bandit6@bandit:/home$ cat /var/lib/dpkg/info/bandit7.password
+Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
+
+
+level 7:
+
+
+ grep  "millionth" data.txt
+millionth       VR1ljMayciFxbnUokuQmJFw6QC9VKtub
+level 8 :
+
+
+
+
+sort command : sort data.txt
+you can also use uniq to filter only distncts
+search for uniqe password that not duplicated
+
+
+
+
+level 9 : 
+
+use strings command to find only readable text in this crypted file : 
+strings data.txt
+
+B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+level 10 : 
+yo umust decode this text inside data.txt using base64 
+
+command : base64 -d data.txt
+
+bandit10@bandit:~$ cat data.txt
+VGhlIHBhc3N3b3JkIGlzIHBZZk9ZNkh3VXNEajVyTDlVdnloVTdNQ212OHZONVJvCg==
+bandit10@bandit:~$ strings data.txt
+VGhlIHBhc3N3b3JkIGlzIHBZZk9ZNkh3VXNEajVyTDlVdnloVTdNQ212OHZONVJvCg==
+
+
+bandit10@bandit:~$ base64 -d data.txt
+
+The password is pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+
+
+Level 11 : 
+rotated 13 
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+
+Mn-za-m'
+The password is GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+
+
+level 12 : 
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+
+
