@@ -115,4 +115,10 @@ The password is GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
 level 12 : 
 ssh bandit12@bandit.labs.overthewire.org -p 2220
 
+Look at the file: level12_bandit.txt to show the solution
+
+qQYQiHOBPR8zR61qxYqX45quvihF2uzk
+
+level 13 : 
+
 
